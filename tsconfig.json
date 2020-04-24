@@ -1,0 +1,7 @@
+{
+  "extends": "@sandvikcode/web-tooling/config/tsconfig",
+  "include": ["src/**/*"],
+  "compilerOptions": {
+    "module": "commonjs"
+  }
+}

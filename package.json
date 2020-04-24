@@ -1,0 +1,44 @@
+{
+  "name": "test",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "web-tooling webpack-dev-server",
+    "build": "web-tooling webpack",
+    "analyze": "web-tooling analyze",
+    "format": "web-tooling format",
+    "lint": "web-tooling lint",
+    "storybook": "web-tooling storybook:react",
+    "test": "web-tooling test",
+    "test-debug": "node --inspect --inspect-brk ./node_modules/.bin/jest",
+    "test-watch": "web-tooling test --watch",
+    "type-check": "web-tooling type-check",
+    "node": "nodemon --exec \"ts-node\" src/server.ts --watch src/*.ts"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "web-tooling pre-commit",
+      "pre-push": "web-tooling pre-push"
+    }
+  },
+  "devDependencies": {
+    "@sandvikcode/web-tooling": "^1.1.0",
+    "@types/express": "^4.17.6",
+    "@types/node": "^13.13.2",
+    "@types/react": "^16.9.34",
+    "@types/react-dom": "^16.9.6",
+    "husky": "^4.2.5",
+    "nodemon": "^2.0.3"
+  },
+  "dependencies": {
+    "@babel/node": "^7.8.7",
+    "@types/react-native": "^0.62.4",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-native-web": "^0.12.2",
+    "ts-node": "^8.9.0"
+  }
+}
