@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { calculate } from './tests/calculator';
+import { calculate } from './calculator/calculator';
 
 export default { title: 'Test' };
 
@@ -7,7 +7,7 @@ const ExpressionEvaluator = () => {
   const [expression, setExpression] = useState<string>('');
   const [result, setResult] = useState<string>('');
   useEffect(() => {
-    async function doIt() {
+    async function serverCalculate() {
       const httpResponse = await fetch(
         `http://localhost:3000/?expression=${encodeURIComponent(expression)}`,
       );
@@ -18,7 +18,11 @@ const ExpressionEvaluator = () => {
         setResult(requestResult.errorMessage);
       }
     }
-    doIt();
+    if (expression === '') {
+      setResult('');
+    } else {
+      serverCalculate();
+    }
   }, [expression]);
 
   return (

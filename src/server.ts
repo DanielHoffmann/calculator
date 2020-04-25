@@ -2,7 +2,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import express = require('express');
 import bodyParser = require('body-parser');
-import calculator = require('./tests/calculator');
+import calculator = require('./calculator/calculator');
 
 const app = express();
 app.use(bodyParser.json());

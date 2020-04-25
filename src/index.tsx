@@ -1,5 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Root } from './web/Root';
+
+const Root = () => {
+  return <p>Root</p>;
+};
 
 ReactDOM.render(<Root />, document.getElementById('root'));
