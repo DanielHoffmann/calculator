@@ -12,4 +12,4 @@ react code / storybook: `yarn run storybook`
 
 The tokenizer is implemented with the following state machine:
 
-(tokenizer.png)](tokenizer.png)
+[tokenizer.png](tokenizer.png)
